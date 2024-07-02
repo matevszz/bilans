@@ -23,6 +23,7 @@ main {
 }
 
 header {
+    overflow-x: hidden;
     height: 64px;
     display: flex;
     align-items: center;
@@ -51,6 +52,8 @@ header a:hover {
 }
 
 .index {
+
+    overflow-x: hidden;
 
     .hero {
         display: flex;
@@ -326,6 +329,7 @@ header a:hover {
         font-weight: 400;
         border: 1px solid black;
         border-radius: 100px;
+        z-index: 2;
     }
 
     .bmi button {
@@ -372,49 +376,54 @@ header a:hover {
 
 }
 
+.bmr-background-span-1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--custom-ping);
+    border-radius: 100%;
+    left: -8%;
+    top: 20%;
+}
+
+.bmr-background-span-2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #71A9FC;
+    left: 25%;
+    top: 45%;
+}
+
+.bmr-background-span-3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--custom-light-gren);
+    border-radius: 100%;
+    right: 15%;
+    top: 50%;
+}
+
+.bmr-background-span-4 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: var(--custom-green);
+    right: -8%;
+    top: 10%;
+}
+
 body.bmr {
-    overflow: hidden;
 
-    margin: 0 5vw;
-
-    .background-span-1 {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background-color: var(--custom-ping);
-        border-radius: 100%;
-        left: -8%;
-        top: 20%;
+    header {
+        margin: 0 5vw;
     }
 
-    .background-span-2 {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-        background-color: #71A9FC;
-        left: 25%;
-        top: 45%;
-    }
-
-    .background-span-3 {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        background-color: var(--custom-light-gren);
-        border-radius: 100%;
-        right: 15%;
-        top: 50%;
-    }
-
-    .background-span-4 {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border-radius: 100%;
-        background-color: var(--custom-green);
-        right: -8%;
-        top: 10%;
+    .bmr-bmr {
+        
     }
 
     .kalkulator-bmr {
@@ -663,14 +672,34 @@ body.bmr {
 
 @media(max-width: 800px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     header a {
         font-size: 14px;
     }
 
     .index {
 
+        z-index: 0;
+
+        header {
+            justify-content: space-between;
+        }
+
+        .a {
+            gap: 12px;
+            font-size: 12px;
+        }
+
+        .hero {
+            margin-top: 48px;
+        }
+
         .hero h1 {
-            z-index: 1;
+            position: relative;
+            z-index: 3;
             font-size: 32px;
         }
 
@@ -680,8 +709,9 @@ body.bmr {
         }
 
         .starting img {
-            max-width: 400px;
+            max-width: 75%;
             width: 100%;
+            border-radius: 10px;
         }
 
         #nr1span {
@@ -690,8 +720,10 @@ body.bmr {
         }
 
         #nr2span {
+            position: absolute;
             width: 100px;
             height: 100px;
+            z-index: 1;
         }
 
         .starting h1 {
@@ -703,7 +735,7 @@ body.bmr {
         }
 
         #big-span {
-            height: 500px;
+            height: 600px;
         }
 
         .bmr-div {
@@ -732,12 +764,39 @@ body.bmr {
             justify-content: center;
         }
 
+        .ending div h1 {
+            font-size: 24px;
+        }
+
         .ending div a {
-            margin-left: 28%;
+            margin: 0;
+            margin-bottom: 48px;
+        }
+        .ending div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
     .kalkulator-bmi {
+
+        margin: 0;
+
+        .bmi {
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            margin: 0 5vw;
+            justify-content: space-between;
+        }
+
+        .a {
+            gap: 12px;
+            font-size: 12px;
+        }
 
         input {
             z-index: 1;
@@ -747,6 +806,10 @@ body.bmr {
             z-index: 2;
         }
 
+        .bmi p {
+            font-size: 14px;
+        }
+
         .bmi-output h1 {
             z-index: 1;
         }
@@ -754,13 +817,97 @@ body.bmr {
         .bmi-output h2 {
             z-index: 2;
         }
+        
+        .background-span-4 {
+            width: 100px;
+            height: 100px;
+            right: -15%;
+        }
+
+        .background-span-1 {
+            width: 100px;
+            height: 100px;
+            left: -15%;
+        }
+
+    }
+    
+    .bmr-background-span-1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
     }
 
-    .bmr {
+    .bmr-background-span-2 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    .bmr-background-span-3 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    .bmr-background-span-4 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+
+    .bmr-bmr {
+        margin: 0;
+        position: relative;
         overflow: hidden;
 
+        
+    }
+
+    body.bmr {
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+
+        header {
+            justify-content: space-between;
+        }
+
+        .output-schudnac h1 {
+            z-index: 1;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .output-przytyc h1 {
+            z-index: 1;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .output-utrzymac h1 {
+            z-index: 1;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .a {
+            gap: 12px;
+            font-size: 12px;
+        }
+
         .kalkulator-bmr {
-            overflow: hidden;
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+        }
+
+        .work h1 {
+            font-size: 32px;
+            text-align: center;
+            z-index: 1;
         }
     }
 }
