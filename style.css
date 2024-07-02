@@ -422,10 +422,6 @@ body.bmr {
         margin: 0 5vw;
     }
 
-    .bmr-bmr {
-        
-    }
-
     .kalkulator-bmr {
         display: block;
     }
@@ -889,6 +885,10 @@ body.bmr {
             z-index: 1;
             font-size: 24px;
             text-align: center;
+        }
+
+        .goal h1 {
+            z-index: 1;
         }
 
         .a {
