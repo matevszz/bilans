@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/web-icon.png">
+    <title>Bilans | Przelicz swoje BMI oraz BMR i zadbaj o swoją sylwetkę</title>
+</head>
+<body class="kalkulator-bmi">
+    <header>
+        <a href="index.html"><img src="images/logotyp-bilans.svg" alt="Bilans Logo"> </a>
+        <div class="a">
+            <a href="kalkulator-bmr.html">Kalkulator BMR</a>
+            <a href="kalkulator-bmi.html">Kalkulator BMI</a>
+        </div>
+    </header>
+    <section class="bmi">
+        <span class="background-span-1"></span>
+        <span class="background-span-2"></span>
+        <span class="background-span-3"></span>
+        <span class="background-span-4"></span>
+        <main class="landing-bmi">
+            <h1>Sprawdźmy twoje BMI</h1>
+            <p>BMI < 18,5 - niedowaga<br/>BMI pomiędzy 18,5 a 24,9 - waga prawidłowa<br/>BMI pomiędzy 25 a 29,9 - nadwaga<br/>BMI > 30 - otyłość</p>
+            <input type="text" name="weight" id="weight" placeholder="Wpisz swoją wagę (w kg)">
+            <input type="text" name="height" id="height" placeholder="Wpisz swój wzrost (w cm)">
+            <button class="bmi-dalej">
+                Oblicz BMI
+            </button>
+        </main>
+        <main class="bmi-output">
+            <h1>Twoje BMI wynosi:</h1>
+            <h2 class="bmi-output-text"></h2>
+        </main>
+    </section>
+    <script src="bmi-script.js"></script>
+</body>
+</html>

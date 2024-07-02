@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/web-icon.png">
+    <title>Bilans | Przelicz swoje BMI oraz BMR i zadbaj o swoją sylwetkę</title>
+</head>
+<body class="bmr">
+    <span class="background-span-1"></span>
+        <span class="background-span-2"></span>
+        <span class="background-span-3"></span>
+        <span class="background-span-4"></span>
+    <section>
+        <header>
+            <a href="index.html"><img src="images/logotyp-bilans.svg" alt="Bilans Logo" class="logo"></a>
+            <div class="a">
+                <a href="kalkulator-bmr.html">Kalkulator BMR</a>
+                <a href="kalkulator-bmi.html">Kalkulator BMI</a>
+            </div>
+        </header>
+        <main class="kalkulator-bmr">
+            <div class="hero">
+                <h1>Sprawdźmy twoje BMR</h1>
+                <div class="selecting-gender">
+                    <select name="gender" id="gender">
+                        <option value="man">Mężczyzna</option>
+                        <option value="woman">Kobieta</option>
+                    </select>
+                    <img src="images/arrow-down.svg" alt=" " class="arrow-down">
+                </div>
+                <input type="text" placeholder="Wpisz swój wiek" class="age">
+                <input type="text" placeholder="Wpisz swoją wagę (w kg)" class="weight">
+                <input type="text" placeholder="Wpisz swój wzrost (w cm)" class="height">
+                <button class="bmr-dalej">Dalej</button>
+            </div>
+        </main>
+        <main class="work">
+            <h1>Aktywność fizyczna</h1>
+            <div class="selecting-activity">
+                <select name="work" id="work">
+                    <option value="">Wybierz swoją aktywność fizyczną</option>
+                    <option value="1">Praca siedząca/brak ćwiczeń</option>
+                    <option value="2">Lekka praca np. sprzedaż/ćwiczenia raz w tygodniu</option>
+                    <option value="3">Umiarkowana praca np. sprzątanie, praca w kuchni/regularne ćwiczenia w ciągu tygodnia</option>
+                    <option value="4">Ciężka praca fizyncza np. na budowie/duża aktywność fizyczna w ciągu tygodnia</option>
+                    <option value="5">Intensywne treningi kilka razy w tygodniu</option>
+                </select>
+                <img src="images/arrow-down.svg" alt="">
+            </div>
+            <button class="work-dalej">Dalej</button>
+        </main>
+        <main class="goal">
+            <h1>Wybierz swój cel</h1>
+            <button class="schudnac">Chce schudnąć</button>
+            <button class="przytyc">Chce przytyć</button>
+            <button class="utrzymac-wage">Chce utrzymać wagę</button>
+        </main>
+        <main class="output-schudnac">
+            <h1>Twoje zapotrzebowanie kaloryczne aby schudnąć wynosi:</h1>
+            <h2 class="schudnac-h2"></h2>
+        </main>
+        <main class="output-utrzymac">
+            <h1>Twoje zapotrzebowanie kaloryczne aby utrzymać wagę wynosi:</h1>
+            <h2 class="utrzymac-h2"></h2>
+        </main>
+        <main class="output-przytyc">
+            <h1>Twoje zapotrzebowanie kaloryczne aby przytyć wynosi:</h1>
+            <h2 class="przytyc-h2"></h2>
+        </main>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
